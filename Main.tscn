@@ -1,0 +1,174 @@
+[gd_scene format=3 uid="uid://blfotp2ocxs4h"]
+
+[ext_resource type="Script" uid="uid://chy6u0hr414dc" path="res://main.gd" id="1_glv2v"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_glv2v"]
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_color = Color(0.8745098, 0.8745098, 0.8745098, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_r0du0"]
+draw_center = false
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_uu6xs"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uu6xs"]
+content_margin_bottom = 10.0
+draw_center = false
+
+[sub_resource type="LabelSettings" id="LabelSettings_r0du0"]
+font_size = 72
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_glv2v"]
+content_margin_left = 0.0
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_r0du0"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_cm0pq"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cm0pq"]
+content_margin_bottom = 10.0
+draw_center = false
+
+[sub_resource type="LabelSettings" id="LabelSettings_fos0i"]
+font_size = 72
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fos0i"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3dxm6"]
+
+[node name="Control" type="Control" unique_id=1817767482]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_glv2v")
+
+[node name="Timer" type="Timer" parent="." unique_id=1025816407]
+unique_name_in_owner = true
+wait_time = 15.0
+one_shot = true
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=346867917]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer" unique_id=1435212691]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CenterContainer/VBoxContainer" unique_id=596358228]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="MarginContainer" type="MarginContainer" parent="CenterContainer/VBoxContainer/HBoxContainer" unique_id=1248258433]
+layout_mode = 2
+theme_override_constants/margin_left = -30
+theme_override_constants/margin_right = -30
+
+[node name="hours_input" type="LineEdit" parent="CenterContainer/VBoxContainer/HBoxContainer/MarginContainer" unique_id=60521071]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_colors/font_uneditable_color = Color(0.8745098, 0.8745098, 0.8745098, 1)
+theme_override_colors/selection_color = Color(0.5019608, 0.5019608, 0.5019608, 0)
+theme_override_colors/clear_button_color = Color(0.8745098, 0.8745098, 0.8745098, 0)
+theme_override_colors/clear_button_color_pressed = Color(1, 1, 1, 0)
+theme_override_constants/minimum_character_width = 2
+theme_override_font_sizes/font_size = 72
+theme_override_styles/normal = SubResource("StyleBoxFlat_glv2v")
+theme_override_styles/read_only = SubResource("StyleBoxFlat_r0du0")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_uu6xs")
+text = "00"
+alignment = 1
+max_length = 2
+context_menu_enabled = false
+emoji_menu_enabled = false
+flat = true
+select_all_on_focus = true
+
+[node name="Label" type="Label" parent="CenterContainer/VBoxContainer/HBoxContainer" unique_id=1015276541]
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_uu6xs")
+text = ":"
+label_settings = SubResource("LabelSettings_r0du0")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MarginContainer2" type="MarginContainer" parent="CenterContainer/VBoxContainer/HBoxContainer" unique_id=708641566]
+layout_mode = 2
+theme_override_constants/margin_left = -30
+theme_override_constants/margin_right = -30
+
+[node name="minutes_input" type="LineEdit" parent="CenterContainer/VBoxContainer/HBoxContainer/MarginContainer2" unique_id=2012720534]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_uneditable_color = Color(0.8745098, 0.8745098, 0.8745098, 1)
+theme_override_colors/selection_color = Color(0.5019608, 0.5019608, 0.5019608, 0)
+theme_override_constants/minimum_character_width = 2
+theme_override_font_sizes/font_size = 72
+theme_override_styles/normal = SubResource("StyleBoxEmpty_glv2v")
+theme_override_styles/read_only = SubResource("StyleBoxEmpty_r0du0")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_cm0pq")
+text = "00"
+alignment = 1
+max_length = 2
+flat = true
+select_all_on_focus = true
+
+[node name="Label2" type="Label" parent="CenterContainer/VBoxContainer/HBoxContainer" unique_id=2017714502]
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_cm0pq")
+text = ":"
+label_settings = SubResource("LabelSettings_fos0i")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MarginContainer3" type="MarginContainer" parent="CenterContainer/VBoxContainer/HBoxContainer" unique_id=1285696577]
+layout_mode = 2
+theme_override_constants/margin_left = -30
+theme_override_constants/margin_right = -30
+
+[node name="seconds_input" type="LineEdit" parent="CenterContainer/VBoxContainer/HBoxContainer/MarginContainer3" unique_id=322426221]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_uneditable_color = Color(0.8745098, 0.8745098, 0.8745098, 1)
+theme_override_colors/selection_color = Color(0.5019608, 0.5019608, 0.5019608, 0)
+theme_override_constants/minimum_character_width = 2
+theme_override_font_sizes/font_size = 72
+theme_override_styles/normal = SubResource("StyleBoxEmpty_glv2v")
+theme_override_styles/read_only = SubResource("StyleBoxEmpty_fos0i")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_3dxm6")
+text = "00"
+alignment = 1
+max_length = 2
+flat = true
+select_all_on_focus = true
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="CenterContainer/VBoxContainer" unique_id=1298026583]
+layout_mode = 2
+
+[node name="PauseButton" type="Button" parent="CenterContainer/VBoxContainer/HBoxContainer2" unique_id=1745795366]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Start/Pause"
+
+[node name="ResetButton" type="Button" parent="CenterContainer/VBoxContainer/HBoxContainer2" unique_id=1952554694]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Reset"
+
+[node name="NewButton" type="Button" parent="CenterContainer/VBoxContainer/HBoxContainer2" unique_id=859253507]
+unique_name_in_owner = true
+layout_mode = 2
+text = "New"
+
+[node name="TimeOutSoundPlayer" type="AudioStreamPlayer" parent="." unique_id=200672172]
