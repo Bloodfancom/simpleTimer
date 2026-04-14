@@ -33,6 +33,16 @@ func _ready() -> void:
 	hours_input.text_submitted.connect(set_timer_time)
 	minutes_input.text_submitted.connect(set_timer_time)
 	seconds_input.text_submitted.connect(set_timer_time)
+	
+	hours_input.text_changed.connect(func(input_text) ->void:
+		sanitize_timer_time(input_text,hours_input)
+	)
+	minutes_input.text_changed.connect(func(input_text) -> void:
+		sanitize_timer_time(input_text,minutes_input)
+	)
+	seconds_input.text_changed.connect(func(input_text) -> void:
+		sanitize_timer_time(input_text,seconds_input)
+	)
 	exit_button.pressed.connect(get_tree().quit)
 	timer.timeout.connect(func() ->void:
 		time_out_sound_player.play()
@@ -66,6 +76,21 @@ func _ready() -> void:
 	
 	reset_button.pressed.connect(reset_timer)
 	
+
+func char_is_not_number(character) -> bool:
+	return character not in "0123456789 "
+
+#This is stupid but it works
+func sanitize_numbers(input_field :LineEdit) ->void:
+	for i in input_field.text.length():
+		print(input_field.text)
+		if char_is_not_number(input_field.text[i]):
+			input_field.text[i] = " "
+	input_field.text = input_field.text.strip_edges()
+			
+func sanitize_timer_time(input_char,input_field) ->void:
+	if char_is_not_number(input_char):
+		sanitize_numbers(input_field)
 
 func reset_timer() ->void:
 	match current_state:
