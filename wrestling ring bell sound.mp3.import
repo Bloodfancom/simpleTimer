@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://sn3fb25l7sgi"
+path="res://.godot/imported/wrestling ring bell sound.mp3-80d7de07500273c408e6be6ea230ac87.mp3str"
+
+[deps]
+
+source_file="res://wrestling ring bell sound.mp3"
+dest_files=["res://.godot/imported/wrestling ring bell sound.mp3-80d7de07500273c408e6be6ea230ac87.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
