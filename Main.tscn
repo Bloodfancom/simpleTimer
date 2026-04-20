@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://blfotp2ocxs4h"]
 
 [ext_resource type="Script" uid="uid://chy6u0hr414dc" path="res://main.gd" id="1_glv2v"]
+[ext_resource type="AudioStream" uid="uid://sn3fb25l7sgi" path="res://wrestling ring bell sound.mp3" id="2_uu6xs"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_glv2v"]
 content_margin_top = 0.0
@@ -63,6 +64,16 @@ grow_vertical = 2
 
 [node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer" unique_id=1435212691]
 layout_mode = 2
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="CenterContainer/VBoxContainer" unique_id=1756942517]
+layout_mode = 2
+alignment = 2
+
+[node name="ExitButton" type="Button" parent="CenterContainer/VBoxContainer/HBoxContainer3" unique_id=2074442505]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(4, 4)
+layout_mode = 2
+text = "X"
 
 [node name="HBoxContainer" type="HBoxContainer" parent="CenterContainer/VBoxContainer" unique_id=596358228]
 layout_mode = 2
@@ -155,6 +166,7 @@ select_all_on_focus = true
 
 [node name="HBoxContainer2" type="HBoxContainer" parent="CenterContainer/VBoxContainer" unique_id=1298026583]
 layout_mode = 2
+alignment = 1
 
 [node name="PauseButton" type="Button" parent="CenterContainer/VBoxContainer/HBoxContainer2" unique_id=1745795366]
 unique_name_in_owner = true
@@ -172,3 +184,5 @@ layout_mode = 2
 text = "New"
 
 [node name="TimeOutSoundPlayer" type="AudioStreamPlayer" parent="." unique_id=200672172]
+unique_name_in_owner = true
+stream = ExtResource("2_uu6xs")
