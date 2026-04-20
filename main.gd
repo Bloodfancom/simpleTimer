@@ -69,9 +69,9 @@ func set_timer_time(_text) -> void:
 	timer_time = 3600 * int(hours_input.text) + 60 * int(minutes_input.text) + int(seconds_input.text)
 	timer.start(timer_time)
 	current_state = STATES.PLAY
-	hours_input.editable =false
-	minutes_input.editable =false
-	seconds_input.editable =false
+	hours_input.editable = false
+	minutes_input.editable = false
+	seconds_input.editable = false
 	
 func display_time(time:int) -> void:
 	hours = int(time) / 3600
